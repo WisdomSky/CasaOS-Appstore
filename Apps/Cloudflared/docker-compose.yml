@@ -31,6 +31,10 @@ x-casaos:
     en_us: 'Visit homepage: https://hub.docker.com/r/wisdomsky/casaos-cloudflared'
   tagline:
     en_us: A tunneling daemon by Cloudflare that safely exposes your localhost into the web.
+  screenshot_link:
+    - https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/screenshot-1.png
+    - https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/screenshot-2.png
+    - https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/screenshot-3.png
   developer: WisdomSky
   author: WisdomSky
   icon: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/icon.png
