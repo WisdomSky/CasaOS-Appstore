@@ -1,0 +1,39 @@
+name: Casaos-cloudflared
+services:
+  app:
+    image: wisdomsky/casaos-cloudflared@sha256:5f8994c4d6e5e213ecd227dd7eef4628aa74f61dcef0e5fa2f9bf61835aac9d4
+    restart: unless-stopped
+    x-casaos:
+      volumes:
+        - container: /config
+          description:
+            en_us: Contains config file where cloudflare token is stored.
+      ports:
+        - container: '14333'
+          description:
+            en_us: Token Setup WebUI
+    ports:
+      - target: 14333
+        published: 14333
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/casaos-cloudflared/config
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: 'Visit homepage: https://hub.docker.com/r/wisdomsky/casaos-cloudflared'
+  tagline:
+    en_us: A tunneling daemon by Cloudflare that safely exposes your localhost into the web.
+  developer: WisdomSky
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/linuxserver/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
+  thumbnail: https://raw.githubusercontent.com/linuxserver/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
+  title:
+    en_us: Casaos-cloudflared
+  port_map: '14333'
