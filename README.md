@@ -1,4 +1,4 @@
-# WisdomSky's Casaos Appstore
+# WisdomSky's CasaOS Appstore
 
 WisdomSky's custom collection of CasaOS Apps
 
