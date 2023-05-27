@@ -14,7 +14,7 @@ casaos-cli app-management register app-store https://paodayag.dev/appstore.zip
 
 ## Apps
 
-* [Casaos-cloudflared](https://hub.docker.com/r/wisdomsky/casaos-cloudflared/)
+* [Cloudflared](https://hub.docker.com/r/wisdomsky/casaos-cloudflared/)
 * Ngrok - _TO BE ADDED_
 * Petio - _TO BE ADDED_
 * More coming soon...

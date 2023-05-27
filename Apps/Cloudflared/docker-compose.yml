@@ -1,4 +1,4 @@
-name: Casaos-cloudflared
+name: Cloudflared
 services:
   app:
     image: wisdomsky/casaos-cloudflared@sha256:5f8994c4d6e5e213ecd227dd7eef4628aa74f61dcef0e5fa2f9bf61835aac9d4
@@ -32,8 +32,8 @@ x-casaos:
     en_us: A tunneling daemon by Cloudflare that safely exposes your localhost into the web.
   developer: WisdomSky
   author: WisdomSky
-  icon: https://raw.githubusercontent.com/linuxserver/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
-  thumbnail: https://raw.githubusercontent.com/linuxserver/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
+  icon: https://raw.githubusercontent.com/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
+  thumbnail: https://raw.githubusercontent.com/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
   title:
-    en_us: Casaos-cloudflared
+    en_us: Cloudflared
   port_map: '14333'
