@@ -32,8 +32,8 @@ x-casaos:
     en_us: A tunneling daemon by Cloudflare that safely exposes your localhost into the web.
   developer: WisdomSky
   author: WisdomSky
-  icon: https://raw.githubusercontent.com/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
-  thumbnail: https://raw.githubusercontent.com/wisdomsky/casaos-appstore/apps/casaos-cloudflared/icon.png
+  icon: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/icon.png
+  thumbnail: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/icon.png
   title:
     en_us: Cloudflared
   port_map: '14333'
