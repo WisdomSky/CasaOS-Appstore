@@ -19,6 +19,13 @@ services:
         - container: TZ
           description:
             en_us: specify a timezone to use.
+      volumes:
+        - container: /config
+          description:
+            en_us: Contains the config file.
+        - container: /data
+          description:
+            en_us: Contains the petio data.
       ports:
         - container: '7777'
           description:
