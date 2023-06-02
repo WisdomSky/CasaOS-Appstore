@@ -3,11 +3,11 @@ services:
   app:
     image: ghcr.io/petio-team/petio:sha-c2f5ae43a89474ef1bd366551fe12fe5ff9d4af3
     restart: unless-stopped
+    network_mode: host
     environment:
       PUID: $PUID
       PGID: $PGID
       TZ: $TZ
-    user: '${PUID}:${PGID}'
     x-casaos:
       envs:
         - container: PUID
@@ -20,12 +20,12 @@ services:
           description:
             en_us: specify a timezone to use.
       volumes:
-        - container: /app/api/config
+        - container: /config
           description:
             en_us: Contains the config file.
-        - container: /app/logs
+         - container: /data
           description:
-            en_us: Contains petio logs
+            en_us: Contains the petio data.
       ports:
         - container: '7777'
           description:
@@ -37,10 +37,10 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/petio/config
-        target: /app/api/config
+        target: /config
       - type: bind
-        source: /DATA/AppData/petio/logs
-        target: /app/logs
+        source: /DATA/AppData/petio/data
+        target: /data
 x-casaos:
   architectures:
     - amd64
