@@ -1,0 +1,62 @@
+name: Petio
+services:
+  app:
+    image: ghcr.io/petio-team/petio:sha-c2f5ae43a89474ef1bd366551fe12fe5ff9d4af3
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    user: '${PUID}:${PGID}'
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use.
+      volumes:
+        - container: /app/api/config
+          description:
+            en_us: Contains the config file.
+        - container: /app/logs
+          description:
+            en_us: Contains petio logs
+      ports:
+        - container: '7777'
+          description:
+            en_us: WebUI Port
+    ports:
+      - target: 7777
+        published: 7777
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/petio/config
+        target: /app/api/config
+      - type: bind
+        source: /DATA/AppData/petio/logs
+        target: /app/logs
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: 'Visit homepage: https://docs.petio.tv/install-guides/docker'
+  tagline:
+    en_us: A third party companion app available to Plex server owners to allow their users to request, review and discover content.
+  screenshot_link:
+  developer: Petio Team
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Petio/icon.png
+  thumbnail: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Petio/icon.png
+  title:
+    en_us: Petio
+  category: Media
+  port_map: '7777'
