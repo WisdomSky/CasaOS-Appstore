@@ -51,6 +51,6 @@ x-casaos:
   icon: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Mongo/icon.png
   thumbnail: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Mongo/icon.png
   title:
-    en_us: Mongo DB
+    en_us: MongoDB
   category: Database
-  port_map: '7777'
+  port_map: '27017'

@@ -58,5 +58,8 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Petio/icon.png
   title:
     en_us: Petio
+  tips:
+    before_install:
+        en_us: MongoDB is required when setting up Petio. Make sure to install it if you haven't installed it yet.
   category: Media
   port_map: '7777'
