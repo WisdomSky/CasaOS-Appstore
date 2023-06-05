@@ -3,12 +3,9 @@ services:
   app:
     image: mongo:6.0.6
     restart: unless-stopped
-    network_mode: bridge
-    networks:
-      default:
-        aliases:
-          - mongo
     hostname: mongo
+    networks:
+      - mongo
     environment:
       PUID: $PUID
       PGID: $PGID
@@ -65,3 +62,7 @@ x-casaos:
     en_us: MongoDB
   category: Database
   port_map: '27017'
+  
+ networks:
+  mongo:
+    driver: bridge
