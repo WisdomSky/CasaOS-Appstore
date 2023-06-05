@@ -62,7 +62,3 @@ x-casaos:
     en_us: MongoDB
   category: Database
   port_map: '27017'
-  
-networks:
-  mongo:
-    driver: bridge
