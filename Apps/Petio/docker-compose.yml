@@ -40,6 +40,8 @@ services:
       - type: bind
         source: /DATA/AppData/petio/logs
         target: /app/logs
+    networks:
+      - bridge
 x-casaos:
   architectures:
     - amd64
