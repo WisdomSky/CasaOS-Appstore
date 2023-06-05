@@ -1,7 +1,7 @@
 name: Petio
 services:
   app:
-    image: ghcr.io/petio-team/petio:46dac9475680873587d982a1fe7a0c4d7c6da0d3082a2513a476a89b347d9885
+    image: ghcr.io/petio-team/petio@sha256:46dac9475680873587d982a1fe7a0c4d7c6da0d3082a2513a476a89b347d9885
     restart: unless-stopped
     network_mode: host
     environment:
