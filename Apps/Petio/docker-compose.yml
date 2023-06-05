@@ -4,8 +4,6 @@ services:
     image: ghcr.io/petio-team/petio@sha256:1c5a9276a844f4284601cbe332905864950545ebdeaad74bacb9097ea4f4b333
     restart: unless-stopped
     network_mode: bridge
-    networks:
-      - mongo
     environment:
       PUID: $PUID
       PGID: $PGID
