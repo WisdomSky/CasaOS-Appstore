@@ -3,6 +3,7 @@ services:
   app:
     image: ghcr.io/petio-team/petio@sha256:1c5a9276a844f4284601cbe332905864950545ebdeaad74bacb9097ea4f4b333
     restart: unless-stopped
+    command: sh -c "while true; do sleep 10; done"
     networks:
       - mongo
     environment:
