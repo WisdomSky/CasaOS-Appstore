@@ -3,6 +3,7 @@ services:
   app:
     image: ghcr.io/petio-team/petio@sha256:1c5a9276a844f4284601cbe332905864950545ebdeaad74bacb9097ea4f4b333
     restart: unless-stopped
+    network_mode: bridge
     environment:
       PUID: $PUID
       PGID: $PGID
@@ -40,8 +41,6 @@ services:
       - type: bind
         source: /DATA/AppData/petio/logs
         target: /app/logs
-    networks:
-      - bridge
 x-casaos:
   architectures:
     - amd64
