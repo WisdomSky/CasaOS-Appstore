@@ -19,12 +19,12 @@ services:
           description:
             en_us: specify a timezone to use.
       volumes:
-        - container: /config
+        - container: /app/api/config
           description:
             en_us: Contains the config file.
-        - container: /data
+        - container: /app/logs
           description:
-            en_us: Contains the petio data.
+            en_us: Contains the petio logs.
       ports:
         - container: '7777'
           description:
@@ -36,10 +36,10 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/petio/config
-        target: /config
+        target: /app/api/config
       - type: bind
-        source: /DATA/AppData/petio/data
-        target: /data
+        source: /DATA/AppData/petio/logs
+        target: /app/logs
 x-casaos:
   architectures:
     - amd64
