@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     network_mode: bridge
     networks:
-      bridge:
+      default:
         aliases:
           - mongo
     hostname: mongo
