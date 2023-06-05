@@ -3,7 +3,7 @@ services:
   app:
     image: mongo:6.0.6
     restart: unless-stopped
-    network_mode: host
+    network_mode: bridge
     hostname: mongo
     environment:
       PUID: $PUID
@@ -21,9 +21,12 @@ services:
           description:
             en_us: specify a timezone to use.
       volumes:
-        - container: /data
+        - container: /data/configdb
           description:
-            en_us: Data directory
+            en_us: MongoDB Config
+        - container: /data/db
+          description:
+            en_us: MongoDB Database file
       ports:
         - container: '27017'
           description:
@@ -34,8 +37,11 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/mongo/data
-        target: /data
+        source: /DATA/AppData/mongo/data/configdb
+        target: /data/configdb
+      - type: bind
+        source: /DATA/AppData/mongo/data/db
+        target: /data/db
 x-casaos:
   architectures:
     - amd64
