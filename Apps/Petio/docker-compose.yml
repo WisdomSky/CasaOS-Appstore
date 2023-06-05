@@ -3,7 +3,8 @@ services:
   app:
     image: ghcr.io/petio-team/petio@sha256:1c5a9276a844f4284601cbe332905864950545ebdeaad74bacb9097ea4f4b333
     restart: unless-stopped
-    network_mode: bridge
+    networks:
+      - mongo
     environment:
       PUID: $PUID
       PGID: $PGID
@@ -63,3 +64,8 @@ x-casaos:
         en_us: MongoDB is required when setting up Petio. Make sure to install it if you haven't installed it yet.
   category: Media
   port_map: '7777'
+  
+networks:
+  mongo:
+    name: mongo
+    external: true
