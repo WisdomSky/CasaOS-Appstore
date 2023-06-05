@@ -67,5 +67,5 @@ x-casaos:
   
 networks:
   mongo:
-    name: mongo
-    external: true
+    external:
+      name: mongo
