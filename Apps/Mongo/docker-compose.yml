@@ -4,6 +4,10 @@ services:
     image: mongo:6.0.6
     restart: unless-stopped
     network_mode: bridge
+    networks:
+      default:
+        aliases:
+          - mongo
     hostname: mongo
     environment:
       PUID: $PUID
