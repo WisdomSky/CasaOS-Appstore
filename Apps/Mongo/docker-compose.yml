@@ -1,9 +1,10 @@
-name: Mongo
+name: MongoDB
 services:
   app:
     image: mongo:6.0.6
     restart: unless-stopped
     network_mode: host
+    hostname: mongo
     environment:
       PUID: $PUID
       PGID: $PGID
