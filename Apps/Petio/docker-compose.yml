@@ -3,7 +3,6 @@ services:
   app:
     image: 	ghcr.io/petio-team/petio@sha256:41b9f0a5618fd7f82173cb576a1f9694ff90e4e1ddf2ae90eb4095ffccabf84e
     restart: unless-stopped
-    network_mode: host
     environment:
       PUID: $PUID
       PGID: $PGID
