@@ -82,14 +82,4 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/icon.png
   title:
     en_us: Cloudflared
-    zh_cn: Cloudflared
-    ar_sa: Cloudflared
-    de_de: Cloudflared
-    es_es: Cloudflared
-    fr_fr: Cloudflared
-    hu_hu: Cloudflared
-    it_it: Cloudflared
-    ru_ru: Cloudflared
-    pl_pl: Cloudflared
-    pt_br: Cloudflared
   port_map: '14333'
