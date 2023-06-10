@@ -1,7 +1,7 @@
 name: Cloudflared
 services:
   app:
-    image: wisdomsky/casaos-cloudflared@sha256:5f8994c4d6e5e213ecd227dd7eef4628aa74f61dcef0e5fa2f9bf61835aac9d4
+    image: wisdomsky/casaos-cloudflared:1.0
     restart: unless-stopped
     network_mode: host
     x-casaos:
